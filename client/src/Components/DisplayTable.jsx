@@ -13,12 +13,12 @@ const DisplayTable = ({ apiData }) => {
 
   const updatedApiData = apiData.map((data) => ({
     ...data,
-    tietueen_luontiaika: data.tietueen_luontiaika
+    tietueen_luontiaika: data.tietueen_luontiaika != null ? data.tietueen_luontiaika
       .slice(0, -5)
-      .replace('T', ' '),
-    tietueen_muutosaika: data.tietueen_muutosaika
+      .replace('T', ' ') : data.tietueen_luontiaika,
+    tietueen_muutosaika: data.tietueen_muutosaika != null ?  data.tietueen_muutosaika
       .slice(0, -5)
-      .replace('T', ' '),
+      .replace('T', ' ') : data.tietueen_muutosaika,
   }));
 
   const columns = [
