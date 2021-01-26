@@ -2,7 +2,7 @@ CREATE TABLE kustannuspaikka
 ( 
     kustannuspaikkanumero SERIAL NOT NULL check(kustannuspaikkanumero >= 1 and kustannuspaikkanumero <= 999999) PRIMARY KEY,
     kustannuspaikka_nimi VARCHAR(30) NOT NULL,
-    vastuuhenkilön_nimi VARCHAR(40) NOT NULL,
+    vastuuhenkilon_nimi VARCHAR(40) NOT NULL,
     vuosibudjetti NUMERIC(255,2) NOT NULL,
     toteuma NUMERIC(255,2),
     tietueen_luontiaika TIMESTAMP NOT NULL,
